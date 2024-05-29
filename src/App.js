@@ -44,25 +44,13 @@ const fetchData= async (ingr) => {
         footer: '<h3>Ingredients entered incorrectly!!</h3>'
       });
 
-
-
-
     }
-
  
-
-
   }
 
- 
-
-
-
-
-const myAnalysisSearch =(e) =>{
+ const myAnalysisSearch =(e) =>{
  setMySearch(e.target.value)
 }
-
 
 const finalSearch =(e)=> {
   e.preventDefault ();
@@ -77,7 +65,6 @@ useEffect(() => {
   }, [wordSubmitted])
 
 
-
   return (
 <div>
     <div className="container">
@@ -89,7 +76,7 @@ useEffect(() => {
 
 <div className="container">
   <form onSubmit={finalSearch}>
-<input className='search' placeholder='Search...' onChange={myAnalysisSearch} value={mySearch}/>
+<input className='search' placeholder='1 tomato 100 gr rice...' onChange={myAnalysisSearch} value={mySearch}/>
 </form>
 </div>
 
