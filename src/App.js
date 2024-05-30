@@ -36,8 +36,7 @@ const fetchData= async (ingr) => {
     }
     else {
       setStateLoader(false);
-      // alert ('ingredients entered incorrectly');
-      Swal.fire({
+       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Something went wrong!",
@@ -86,16 +85,17 @@ useEffect(() => {
   </button>
 </div>
 
-{myNutrition && <p>{myNutrition.calories} kcal</p>}
+{/* {myNutrition && <p>{myNutrition.calories} kcal</p>} */}
 
 {myNutrition && Object.values(myNutrition.totalNutrients)
-.map(({ label, quantity, unit  }) =>
-  <Nutrition
+.map(({ label, quantity, unit , index }) =>
+  <Nutrition key={index}
   label={label}
   quantity={quantity}
   unit={unit}/>
 )}
 </div>
+
 
   );
 
